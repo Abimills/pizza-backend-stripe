@@ -10,7 +10,6 @@ paymentRouter.get("/config", (req, res) => {
 });
 
 paymentRouter.post("/create-payment-intent", async (req, res) => {
-  const amountToPay = req;
   try {
     const paymentIntent = await stripe(
       process.env.STRIPE_SECRET_KEY
